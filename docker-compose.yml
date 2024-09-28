@@ -56,7 +56,7 @@ services:
     networks: ['demo']
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - 54322:5432
     env_file: .env
     environment:
       - POSTGRES_USER
@@ -121,7 +121,7 @@ services:
     image: dyrnq/open-webui:latest
     container_name: open-webui
     ports:
-      - "8080:8080"
+      - "8081:8080"
     volumes:
       - ./models:/app/backend/models
       - ./open-webui:/app/backend/data
